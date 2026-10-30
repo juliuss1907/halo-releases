@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="vi" data-lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halo — Dynamic Island cho Linux và Windows</title>
+<meta name="description" content="Halo: Dynamic Island nhẹ cho Linux (Wayland/X11) và Windows. Nhạc, lời bài hát, lịch, khay file, clipboard, thiết bị.">
+<meta property="og:title" content="Halo — Dynamic Island cho Linux và Windows">
+<meta property="og:description" content="Một khối mực trên đỉnh màn hình, viền bằng một vầng sáng.">
+<meta property="og:image" content="assets/tabs.png">
+<link rel="icon" href="assets/halo-64.png">
+<style>
+:root {
+  --ink: #07080b; --panel: #0e1015; --surface: #15171d; --surface2: #1f232b; --line: #262a33;
+  --fg: #f2f4f8; --dim: #a3a9b6; --text3: #7c8494; --accent: #8cc4ff;
+}
+* { box-sizing: border-box; }
+html { background: var(--ink); color: var(--fg); }
+body {
+  margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+html[data-lang="vi"] [lang="en"], html[data-lang="en"] [lang="vi"] { display: none; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+header.top { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); font-weight: 600; font-size: 18px; }
+.brand img { width: 28px; height: 28px; }
+.langs { display: flex; gap: 2px; padding: 2px; border-radius: 9px; background: var(--panel); }
+.langs button {
+  border: 0; border-radius: 7px; padding: 4px 10px; font: inherit; font-size: 13px; font-weight: 600;
+  background: transparent; color: var(--text3); cursor: pointer;
+}
+.langs button[aria-pressed="true"] { background: var(--surface2); color: var(--fg); }
+.hero { padding: 56px 0 40px; text-align: center; }
+.hero img.wordmark { width: min(440px, 100%); height: auto; border-radius: 22px; }
+.hero h1 { font-size: clamp(26px, 4.4vw, 42px); line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; margin: 28px 0 10px; }
+.hero p.lead { color: var(--dim); font-size: 17px; max-width: 640px; margin: 0 auto; }
+.downloads { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 30px 0 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 12px;
+  font-weight: 650; font-size: 15px; background: var(--surface2); color: var(--fg);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.btn:hover { text-decoration: none; box-shadow: 0 0 0 1px rgba(140,196,255,.62), 0 0 0 3px rgba(140,196,255,.16); }
+.btn.primary { background: var(--accent); color: var(--ink); box-shadow: none; }
+.btn.primary:hover { box-shadow: 0 0 0 3px rgba(140,196,255,.25); }
+.btn small { font-weight: 500; opacity: .75; }
+.version { color: var(--text3); font-size: 13px; min-height: 20px; }
+.shot { margin: 40px auto 0; max-width: 980px; }
+.shot img { width: 100%; height: auto; border-radius: 16px; display: block; }
+section { padding: 52px 0; border-top: 1px solid var(--line); }
+h2 { font-size: 24px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px; }
+.sub { color: var(--dim); margin: 0 0 28px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--surface); border-radius: 14px; padding: 18px; }
+.card h3 { margin: 0 0 4px; font-size: 15px; font-weight: 650; }
+.card p { margin: 0; color: var(--dim); font-size: 14px; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; align-items: start; }
+.pair img { width: 100%; height: auto; border-radius: 14px; display: block; }
+ol { margin: 0; padding-left: 20px; color: var(--dim); }
+ol li { margin: 6px 0; }
+code { font: 13.5px/1.5 ui-monospace, "JetBrains Mono", monospace; background: var(--panel); padding: 2px 6px; border-radius: 6px; color: var(--fg); }
+.note { color: var(--text3); font-size: 14px; margin-top: 12px; }
+footer { padding: 32px 0 48px; color: var(--text3); font-size: 14px; border-top: 1px solid var(--line); }
+footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="assets/halo-64.png" alt="" width="28" height="28">halo</a>
+    <div class="langs" role="group" aria-label="Ngôn ngữ / Language">
+      <button type="button" data-set-lang="vi" aria-pressed="true">VI</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <img class="wordmark" src="assets/halo-wordmark.png" alt="Halo" width="1100" height="320">
+      <h1>
+        <span lang="vi">Dynamic Island cho Linux và Windows</span>
+        <span lang="en">A Dynamic Island for Linux and Windows</span>
+      </h1>
+      <p class="lead">
+        <span lang="vi">Một khối mực trên đỉnh màn hình, viền bằng một vầng sáng đổi màu theo những gì đang diễn ra. Nhạc, lời bài hát, lịch, khay file, clipboard và thiết bị — nhẹ, không GPU, không webview.</span>
+        <span lang="en">An ink island at the top of your screen, rimmed by a glow that changes colour with what is happening. Music, lyrics, calendar, file tray, clipboard and devices — light, no GPU, no webview.</span>
+      </p>
+      <div class="downloads">
+        <a class="btn primary" href="https://github.com/juliuss1907/halo-releases/releases/latest/download/Halo-x86_64.AppImage">
+          <span lang="vi">Tải cho Linux</span><span lang="en">Download for Linux</span> <small>AppImage</small>
+        </a>
+        <a class="btn" href="https://github.com/juliuss1907/halo-releases/releases/latest/download/halo-x86_64-windows.exe">
+          <span lang="vi">Tải cho Windows</span><span lang="en">Download for Windows</span> <small>.exe</small>
+        </a>
+      </div>
+      <div class="version" id="version"></div>
+      <div class="shot"><img src="assets/tabs.png" alt="" width="1316" height="452" loading="eager"></div>
+    </div>
+
+    <section id="features">
+      <h2><span lang="vi">Có gì bên trong</span><span lang="en">What's inside</span></h2>
+      <p class="sub"><span lang="vi">Mọi tab cùng một khuôn 440 × 212, chuyển bằng thanh icon hoặc con lăn.</span><span lang="en">Every tab shares one 440 × 212 frame; switch with the icon bar or the wheel.</span></p>
+      <div class="grid">
+        <div class="card"><h3><span lang="vi">Nhạc &amp; giờ</span><span lang="en">Music &amp; clock</span></h3><p><span lang="vi">Ảnh bìa, tua, âm lượng, chọn loa; pill đang phát vẫn giữ giờ.</span><span lang="en">Cover, seek, volume, output picker; the playing pill keeps the clock.</span></p></div>
+        <div class="card"><h3><span lang="vi">Lời bài hát</span><span lang="en">Lyrics</span></h3><p><span lang="vi">Lời chạy theo nhạc, tô karaoke theo màu ảnh bìa (Linux).</span><span lang="en">Synced lyrics with karaoke in the cover's colour (Linux).</span></p></div>
+        <div class="card"><h3><span lang="vi">Vầng sáng</span><span lang="en">Status rim</span></h3><p><span lang="vi">Màu bìa đĩa khi phát nhạc, xanh lá khi tải xong, đỏ khi pin yếu.</span><span lang="en">Cover colour while playing, green for finished downloads, red for low battery.</span></p></div>
+        <div class="card"><h3><span lang="vi">Live Activity</span><span lang="en">Live Activities</span></h3><p><span lang="vi">Âm lượng, tải xuống, pin tai nghe mọc thành tai hai bên pill.</span><span lang="en">Volume, downloads and headset battery appear as ears beside the pill.</span></p></div>
+        <div class="card"><h3><span lang="vi">Khay file &amp; clipboard</span><span lang="en">File tray &amp; clipboard</span></h3><p><span lang="vi">Kéo file vào giữ tạm; lịch sử chép, ghim mục hay dùng.</span><span lang="en">Drop files to hold them; copy history with pins.</span></p></div>
+        <div class="card"><h3><span lang="vi">Player nổi</span><span lang="en">Floating player</span></h3><p><span lang="vi">Tách player thành thẻ dọc, kéo đi đâu cũng được (Linux).</span><span lang="en">Detach the player into a card you can drag anywhere (Linux).</span></p></div>
+        <div class="card"><h3><span lang="vi">Nhường chỗ</span><span lang="en">Steps aside</span></h3><p><span lang="vi">Cửa sổ phóng to chạm island thì thu thành vạch mảnh; game toàn màn hình thì ẩn hẳn.</span><span lang="en">Shrinks to a thin bar under maximised windows and hides for fullscreen games.</span></p></div>
+        <div class="card"><h3><span lang="vi">Nhẹ</span><span lang="en">Light</span></h3><p><span lang="vi">~0 % CPU khi đứng yên, khoảng 20 MB RAM, một file chạy duy nhất.</span><span lang="en">~0 % CPU when idle, about 20 MB of RAM, a single executable.</span></p></div>
+      </div>
+    </section>
+
+    <section id="look">
+      <h2><span lang="vi">Thu gọn, thẻ nổi và cài đặt</span><span lang="en">Collapsed, floating and settings</span></h2>
+      <p class="sub"><span lang="vi">4 theme dựng sẵn, 13 font đủ dấu tiếng Việt, xem trước ngay khi chỉnh.</span><span lang="en">Four built-in themes, 13 bundled fonts, live preview while you tweak.</span></p>
+      <div class="pair">
+        <img src="assets/pills.png" alt="" loading="lazy">
+        <img src="assets/settings.png" alt="" loading="lazy">
+      </div>
+    </section>
+
+    <section id="install">
+      <h2><span lang="vi">Cài đặt</span><span lang="en">Install</span></h2>
+      <div class="pair">
+        <div class="card">
+          <h3>Linux</h3>
+          <ol>
+            <li><span lang="vi">Tải <code>Halo-x86_64.AppImage</code>, đặt ở thư mục cố định (ví dụ <code>~/AppImages</code>).</span><span lang="en">Download <code>Halo-x86_64.AppImage</code> into a fixed folder (e.g. <code>~/AppImages</code>).</span></li>
+            <li><code>chmod +x Halo-x86_64.AppImage</code> <span lang="vi">rồi chạy.</span><span lang="en">and run it.</span></li>
+            <li><span lang="vi">Mở lại app để vào Cài đặt → Hệ thống → bật "Khởi động cùng máy".</span><span lang="en">Run it again for Settings → System → "Start with the session".</span></li>
+          </ol>
+          <p class="note"><span lang="vi">Cần glibc 2.35+. Đầy đủ nhất trên KDE Plasma (Wayland); X11 dùng được.</span><span lang="en">Needs glibc 2.35+. Fullest on KDE Plasma (Wayland); X11 works too.</span></p>
+        </div>
+        <div class="card">
+          <h3>Windows 10 / 11</h3>
+          <ol>
+            <li><span lang="vi">Tải <code>halo-x86_64-windows.exe</code> và chạy.</span><span lang="en">Download <code>halo-x86_64-windows.exe</code> and run it.</span></li>
+            <li><span lang="vi">SmartScreen cảnh báo vì file chưa ký số: chọn "More info" → "Run anyway".</span><span lang="en">SmartScreen warns because the file is not code-signed: "More info" → "Run anyway".</span></li>
+            <li><span lang="vi">Icon Halo nằm ở khay hệ thống: bấm để mở Cài đặt.</span><span lang="en">Halo lives in the notification area: click it for Settings.</span></li>
+          </ol>
+          <p class="note"><span lang="vi">Mỗi file phát hành đều có chữ ký minisign (<code>.minisig</code>).</span><span lang="en">Every release file is signed with minisign (<code>.minisig</code>).</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2><span lang="vi">Quyền riêng tư</span><span lang="en">Privacy</span></h2>
+      <p class="sub" style="margin:0">
+        <span lang="vi">Halo không thu thập số liệu. Lịch sử clipboard chỉ nằm trong RAM; mục ghim lưu trên máy bạn. Lời bài hát chỉ gửi tên bài của các app nghe nhạc trong danh sách tới lrclib.net. Kiểm tra cập nhật chỉ đọc file từ GitHub.</span>
+        <span lang="en">Halo collects no telemetry. Clipboard history stays in RAM; pins are stored on your machine. Lyrics only send the track name of allow-listed music apps to lrclib.net. Update checks only read files from GitHub.</span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 juliuss1907 · <span lang="vi">Bảo lưu mọi quyền. Halo không phải phần mềm mã nguồn mở.</span><span lang="en">All rights reserved. Halo is not open source.</span></div>
+    <div class="links">
+      <a href="https://github.com/juliuss1907/halo-releases/releases"><span lang="vi">Các bản phát hành</span><span lang="en">All releases</span></a>
+      <a href="https://github.com/juliuss1907/halo-releases/issues"><span lang="vi">Báo lỗi</span><span lang="en">Report a bug</span></a>
+      <a href="https://github.com/juliuss1907/halo-releases/releases/latest/download/THIRD-PARTY-LICENSES.txt"><span lang="vi">Giấy phép bên thứ ba</span><span lang="en">Third-party licences</span></a>
+    </div>
+  </footer>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  function setLang(lang) {
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang);
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === lang));
+    });
+    try { localStorage.setItem('halo-lang', lang); } catch (e) {}
+    showVersion();
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('halo-lang'); } catch (e) {}
+  var initial = saved || ((navigator.language || 'vi').toLowerCase().indexOf('vi') === 0 ? 'vi' : 'en');
+  document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang')); });
+  });
+
+  var latest = null;
+  function showVersion() {
+    var el = document.getElementById('version');
+    if (!latest || !latest.version) { el.textContent = ''; return; }
+    var vi = root.getAttribute('data-lang') === 'vi';
+    el.textContent = (vi ? 'Phiên bản ' : 'Version ') + latest.version + (latest.date ? ' · ' + latest.date : '');
+  }
+  // latest.json is copied next to this page on every release; without it only the buttons show.
+  fetch('latest.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) { latest = j; showVersion(); })
+    .catch(function () {});
+  setLang(initial);
+})();
+</script>
+</body>
+</html>
