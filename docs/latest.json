@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "date": "2026-10-30",
   "notes": {
-    "vi": "Bản phát hành công khai đầu tiên, giao diện mới \"Vầng sáng\".\n\n- Vầng sáng quanh island đổi màu theo trạng thái: màu ảnh bìa khi phát nhạc, xanh lá khi tải xong, đỏ khi pin yếu.\n- Mọi tab cùng cỡ, chuyển bằng thanh icon ở đáy; Media có chọn loa và thanh âm lượng.\n- Pill đang phát giữ giờ ở bên trái.\n- Tai Live Activity hiện tên file tải xong và tên thiết bị khi pin yếu.\n- Player nổi mới: lớp màu ảnh bìa, chế độ Lời.\n- Cửa sổ cài đặt mới với 4 theme (Mực, Than chì, Kính, Sáng) và 13 font đủ dấu tiếng Việt.\n- Icon mới; icon khay Windows đổi màu theo taskbar sáng / tối.",
-    "en": "First public release, with the new \"Halo rim\" design.\n\n- A rim around the island changes colour with its state: the cover colour while playing, green for finished\n  downloads, red for low battery.\n- All tabs share one size and switch from an icon bar; Media gains an output picker and a volume slider.\n- The playing pill keeps the clock on its left.\n- Live Activity ears show the downloaded file name and a low-battery device by name.\n- New floating player with a cover-tinted backdrop and a lyrics mode.\n- New settings window with 4 themes (Ink, Graphite, Glass, Light) and 13 bundled fonts.\n- New icon; the Windows tray icon follows a light or dark taskbar."
+    "vi": "Halo giờ tự cập nhật.\n\n- Mở Cài đặt là Halo kiểm tra bản mới trên GitHub; có bản mới thì báo ở thanh bên và trang Giới thiệu, kèm ghi chú.\n- Bấm \"Cập nhật ngay\" để tải và thay bản mới, rồi island tự khởi động lại. Mỗi bản đều được kiểm chữ ký số\n  (minisign) trước khi cài; file sai chữ ký bị huỷ, không thay đổi gì.\n- Tắt kiểm tra tự động trong Cài đặt → Hệ thống. Halo chỉ gửi yêu cầu tới GitHub, không gửi dữ liệu nào khác.\n- Linux: tự cập nhật khi chạy bằng AppImage. Windows: thay file exe, bản cũ được dọn ở lần chạy sau.\n- Bạn đang dùng 0.2.0 cần tải 0.3.0 một lần từ trang tải về; từ bản này trở đi Halo tự cập nhật.",
+    "en": "Halo now updates itself.\n\n- Opening Settings checks GitHub for a new version; when there is one, the sidebar and the About page show it with\n  release notes.\n- \"Update now\" downloads and swaps in the new version, then restarts the island. Every download is checked against\n  Halo's signing key (minisign) first; a file with a bad signature is discarded and nothing changes.\n- Turn automatic checks off in Settings → System. Halo only contacts GitHub and sends no other data.\n- Linux: self-update works for the AppImage. Windows: the exe is replaced and the old copy is cleaned up on the next\n  start.\n- If you are on 0.2.0, download 0.3.0 once from the download page; from here on Halo updates itself."
   },
-  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.2.0",
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.0",
   "assets": {
     "linux-x86_64-appimage": {
       "name": "Halo-x86_64.AppImage",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.2.0/Halo-x86_64.AppImage",
-      "size": 8727032,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv2y2nwh5pGpGoyvKTG8yM6GvUOCdC5jqiAa8VvvWaPdibgTD8N8aF7CkwnUdOjaQ6aGgI4VcqS+Vua8g70nBuAE=\ntrusted comment: halo 0.2.0 linux-x86_64-appimage\n5MAmA18xoX4rBLXrxf0upO7YgvLU5aDJHEYwmLuoXm13K5UnzbFmDZJOdHDw4pyEZqxPVpJsuNlssYqFqxewDA==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.0/Halo-x86_64.AppImage",
+      "size": 8780280,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv4JDZvoXAOVKk1YH/iusxjQQOOkeMe69+dA0frMHbGqcImFqj09JWtH9lFUroEJeoEh/TTcWam1aIVukLU2Y2gw=\ntrusted comment: halo 0.3.0 linux-x86_64-appimage\ncTYSjUQuXzQ+dNQ9RXhpvPetQwZxO4W7MqpeSsVdT9mxvajBoyPR0sQ9WcaShfqWwVmIcsyWoeqxsyNQ85AyDQ==\n"
     },
     "windows-x86_64-exe": {
       "name": "halo-x86_64-windows.exe",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.2.0/halo-x86_64-windows.exe",
-      "size": 11502080,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv9i4g9YZvJLORBTTrtQXfUqAsQbjSsLOphurxb/0cAOK6qzgunQW7KiCcxtfdqxqRcA9oaYxMOvtTORiqUk00wU=\ntrusted comment: halo 0.2.0 windows-x86_64-exe\nBUW8zO3SlZqPdH3QozmVY3tC6Nj3QYncYTYXDYtZO7iuYFsyLcrZZz+zgDEY/jIrIh8zFve+WIs5xhyhvj83BQ==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.0/halo-x86_64-windows.exe",
+      "size": 11727360,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv1NmfnGZA3KeOwUYKMi1fvV4wQAdt3NoezMUeRh6ull4zGSJyWW7rJhYnY2jhNVI7bD4J4mo7HNQcT3jZfVkKAU=\ntrusted comment: halo 0.3.0 windows-x86_64-exe\ncOWUXNMFt0qxo1NASxhKWP94OF6BGvKfkixgJLsv6L52PKKAf7C1tXVs3Ac37KLbyGVd3XaT7GXwf+y6ip2dAQ==\n"
     }
   }
 }
