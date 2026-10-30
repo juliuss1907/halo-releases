@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "version": "0.2.0",
+  "date": "2026-10-30",
+  "notes": {
+    "vi": "Bản phát hành công khai đầu tiên, giao diện mới \"Vầng sáng\".\n\n- Vầng sáng quanh island đổi màu theo trạng thái: màu ảnh bìa khi phát nhạc, xanh lá khi tải xong, đỏ khi pin yếu.\n- Mọi tab cùng cỡ, chuyển bằng thanh icon ở đáy; Media có chọn loa và thanh âm lượng.\n- Pill đang phát giữ giờ ở bên trái.\n- Tai Live Activity hiện tên file tải xong và tên thiết bị khi pin yếu.\n- Player nổi mới: lớp màu ảnh bìa, chế độ Lời.\n- Cửa sổ cài đặt mới với 4 theme (Mực, Than chì, Kính, Sáng) và 13 font đủ dấu tiếng Việt.\n- Icon mới; icon khay Windows đổi màu theo taskbar sáng / tối.",
+    "en": "First public release, with the new \"Halo rim\" design.\n\n- A rim around the island changes colour with its state: the cover colour while playing, green for finished\n  downloads, red for low battery.\n- All tabs share one size and switch from an icon bar; Media gains an output picker and a volume slider.\n- The playing pill keeps the clock on its left.\n- Live Activity ears show the downloaded file name and a low-battery device by name.\n- New floating player with a cover-tinted backdrop and a lyrics mode.\n- New settings window with 4 themes (Ink, Graphite, Glass, Light) and 13 bundled fonts.\n- New icon; the Windows tray icon follows a light or dark taskbar."
+  },
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.2.0",
+  "assets": {
+    "linux-x86_64-appimage": {
+      "name": "Halo-x86_64.AppImage",
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.2.0/Halo-x86_64.AppImage",
+      "size": 8727032,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv2y2nwh5pGpGoyvKTG8yM6GvUOCdC5jqiAa8VvvWaPdibgTD8N8aF7CkwnUdOjaQ6aGgI4VcqS+Vua8g70nBuAE=\ntrusted comment: halo 0.2.0 linux-x86_64-appimage\n5MAmA18xoX4rBLXrxf0upO7YgvLU5aDJHEYwmLuoXm13K5UnzbFmDZJOdHDw4pyEZqxPVpJsuNlssYqFqxewDA==\n"
+    },
+    "windows-x86_64-exe": {
+      "name": "halo-x86_64-windows.exe",
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.2.0/halo-x86_64-windows.exe",
+      "size": 11502080,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv9i4g9YZvJLORBTTrtQXfUqAsQbjSsLOphurxb/0cAOK6qzgunQW7KiCcxtfdqxqRcA9oaYxMOvtTORiqUk00wU=\ntrusted comment: halo 0.2.0 windows-x86_64-exe\nBUW8zO3SlZqPdH3QozmVY3tC6Nj3QYncYTYXDYtZO7iuYFsyLcrZZz+zgDEY/jIrIh8zFve+WIs5xhyhvj83BQ==\n"
+    }
+  }
+}
