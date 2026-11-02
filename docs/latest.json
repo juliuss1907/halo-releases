@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "version": "0.3.0",
-  "date": "2026-10-30",
+  "version": "0.3.1",
+  "date": "2026-11-02",
   "notes": {
-    "vi": "Halo giờ tự cập nhật.\n\n- Mở Cài đặt là Halo kiểm tra bản mới trên GitHub; có bản mới thì báo ở thanh bên và trang Giới thiệu, kèm ghi chú.\n- Bấm \"Cập nhật ngay\" để tải và thay bản mới, rồi island tự khởi động lại. Mỗi bản đều được kiểm chữ ký số\n  (minisign) trước khi cài; file sai chữ ký bị huỷ, không thay đổi gì.\n- Tắt kiểm tra tự động trong Cài đặt → Hệ thống. Halo chỉ gửi yêu cầu tới GitHub, không gửi dữ liệu nào khác.\n- Linux: tự cập nhật khi chạy bằng AppImage. Windows: thay file exe, bản cũ được dọn ở lần chạy sau.\n- Bạn đang dùng 0.2.0 cần tải 0.3.0 một lần từ trang tải về; từ bản này trở đi Halo tự cập nhật.",
-    "en": "Halo now updates itself.\n\n- Opening Settings checks GitHub for a new version; when there is one, the sidebar and the About page show it with\n  release notes.\n- \"Update now\" downloads and swaps in the new version, then restarts the island. Every download is checked against\n  Halo's signing key (minisign) first; a file with a bad signature is discarded and nothing changes.\n- Turn automatic checks off in Settings → System. Halo only contacts GitHub and sends no other data.\n- Linux: self-update works for the AppImage. Windows: the exe is replaced and the old copy is cleaned up on the next\n  start.\n- If you are on 0.2.0, download 0.3.0 once from the download page; from here on Halo updates itself."
+    "vi": "- Sửa lỗi thẻ player nổi bị \"lưu ảnh\" (nhảy tới rồi giật lùi) khi kéo trên màn hình; giờ thẻ đi theo chuột mượt.\n- Bản đầu tiên phát qua tính năng tự cập nhật: nếu bạn đang dùng 0.3.0, mở Cài đặt và bấm \"Cập nhật ngay\".",
+    "en": "- Fixed the floating player leaving a double image (jumping ahead and snapping back) while being dragged; it now\n  follows the pointer smoothly.\n- The first release delivered by the self-updater: on 0.3.0, open Settings and press \"Update now\"."
   },
-  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.0",
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.1",
   "assets": {
     "linux-x86_64-appimage": {
       "name": "Halo-x86_64.AppImage",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.0/Halo-x86_64.AppImage",
-      "size": 8780280,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv4JDZvoXAOVKk1YH/iusxjQQOOkeMe69+dA0frMHbGqcImFqj09JWtH9lFUroEJeoEh/TTcWam1aIVukLU2Y2gw=\ntrusted comment: halo 0.3.0 linux-x86_64-appimage\ncTYSjUQuXzQ+dNQ9RXhpvPetQwZxO4W7MqpeSsVdT9mxvajBoyPR0sQ9WcaShfqWwVmIcsyWoeqxsyNQ85AyDQ==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.1/Halo-x86_64.AppImage",
+      "size": 8784376,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvzrHO/gIn3hAwEPynfgORLGeMC1XfkuSs1bWrxZCCh3C1DCu+GCLXLjq/Ig5lRb2/KCpFiyGVUYGXYWp/zIEIQ0=\ntrusted comment: halo 0.3.1 linux-x86_64-appimage\nwpzCODlamOT1EDscXOZmNRK5aCx89rEU0ku9d7oFfG/Rz2HXuThenYdw87bk9HswHtyUlKs8c6iMamTWvZeuDg==\n"
     },
     "windows-x86_64-exe": {
       "name": "halo-x86_64-windows.exe",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.0/halo-x86_64-windows.exe",
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.1/halo-x86_64-windows.exe",
       "size": 11727360,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv1NmfnGZA3KeOwUYKMi1fvV4wQAdt3NoezMUeRh6ull4zGSJyWW7rJhYnY2jhNVI7bD4J4mo7HNQcT3jZfVkKAU=\ntrusted comment: halo 0.3.0 windows-x86_64-exe\ncOWUXNMFt0qxo1NASxhKWP94OF6BGvKfkixgJLsv6L52PKKAf7C1tXVs3Ac37KLbyGVd3XaT7GXwf+y6ip2dAQ==\n"
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv9vcgEJwndL4DP9kyRDKtsUMPedIuXNygOcJke1mhp+9oEkWKhL8Bl7yo5PmPM5FLBQi4XZlm006kM8gr9uVowQ=\ntrusted comment: halo 0.3.1 windows-x86_64-exe\nrPI1RUWrg9Kig5uHxGRUIdLbrcEvl5JH2LYogCji1lrGHEIU20SQLE+C6pcvLKEuAgN7brJIo/ScS1IWUNKoAg==\n"
     }
   }
 }
