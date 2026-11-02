@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "date": "2026-11-02",
   "notes": {
-    "vi": "- Sửa lỗi thẻ player nổi bị \"lưu ảnh\" (nhảy tới rồi giật lùi) khi kéo trên màn hình; giờ thẻ đi theo chuột mượt.\n- Bản đầu tiên phát qua tính năng tự cập nhật: nếu bạn đang dùng 0.3.0, mở Cài đặt và bấm \"Cập nhật ngay\".",
-    "en": "- Fixed the floating player leaving a double image (jumping ahead and snapping back) while being dragged; it now\n  follows the pointer smoothly.\n- The first release delivered by the self-updater: on 0.3.0, open Settings and press \"Update now\"."
+    "vi": "- Sửa hẳn lỗi thẻ player nổi để lại vệt (nhiều bản sao mờ) khi kéo qua cửa sổ khác trên KDE Plasma. Nguyên nhân là\n  hiệu ứng Geometry Change của KWin coi thẻ như cửa sổ thường; giờ các hiệu ứng cửa sổ bỏ qua thẻ.\n- Thẻ nổi di chuyển theo đúng tần số quét của màn hình (ví dụ 165 Hz) thay vì cố định 60 Hz, nên kéo mượt hơn.",
+    "en": "- Fixed the floating player leaving trails (stale copies) when dragged over other windows on KDE Plasma. KWin's\n  Geometry Change effect treated the card as a normal window; window effects now leave it alone.\n- The floating player now moves at the display's refresh rate (e.g. 165 Hz) instead of a fixed 60 Hz, so dragging\n  is smoother."
   },
-  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.1",
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.2",
   "assets": {
     "linux-x86_64-appimage": {
       "name": "Halo-x86_64.AppImage",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.1/Halo-x86_64.AppImage",
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.2/Halo-x86_64.AppImage",
       "size": 8784376,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvzrHO/gIn3hAwEPynfgORLGeMC1XfkuSs1bWrxZCCh3C1DCu+GCLXLjq/Ig5lRb2/KCpFiyGVUYGXYWp/zIEIQ0=\ntrusted comment: halo 0.3.1 linux-x86_64-appimage\nwpzCODlamOT1EDscXOZmNRK5aCx89rEU0ku9d7oFfG/Rz2HXuThenYdw87bk9HswHtyUlKs8c6iMamTWvZeuDg==\n"
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv0Nd+1kXwrupSl2D8OPi+6wGKZpvrmWfOs4VLXaJ4is5QFRiJHgEBew5D8GMcUQT/bzOmEsTwZdHi7Wc7MXu8gc=\ntrusted comment: halo 0.3.2 linux-x86_64-appimage\ng4/vyPR9U5MrvxvvYBPuZGzMDfjhQHZJMT9lyroBQ2e/+AMRarl5LRSAmrgTXoxeWUaQonoU9bE7KccMRpKQDA==\n"
     },
     "windows-x86_64-exe": {
       "name": "halo-x86_64-windows.exe",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.1/halo-x86_64-windows.exe",
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.2/halo-x86_64-windows.exe",
       "size": 11727360,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv9vcgEJwndL4DP9kyRDKtsUMPedIuXNygOcJke1mhp+9oEkWKhL8Bl7yo5PmPM5FLBQi4XZlm006kM8gr9uVowQ=\ntrusted comment: halo 0.3.1 windows-x86_64-exe\nrPI1RUWrg9Kig5uHxGRUIdLbrcEvl5JH2LYogCji1lrGHEIU20SQLE+C6pcvLKEuAgN7brJIo/ScS1IWUNKoAg==\n"
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv75EUURV2hX8pz1WCXLoq/oU30Soz4BOEzhC6H0kofMbiemQB0KyO0HS6OqKZGbJ4PSuiOYio42Pkrxj9aVG1gA=\ntrusted comment: halo 0.3.2 windows-x86_64-exe\n85D7o1UjOQYn3o6CJiIKMeR32si/zdpZKMSF2EvaeX+cy2CepcqUWcqcOs9v+I/Y5rq3+wvmjtFjcd5j4eD3Aw==\n"
     }
   }
 }
