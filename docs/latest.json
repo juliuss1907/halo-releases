@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "version": "0.3.4",
+  "version": "0.3.5",
   "date": "2026-11-04",
   "notes": {
-    "vi": "- Lời bài hát cho YouTube trên trình duyệt (Linux): Zen, Firefox, Chrome, Brave, Edge, FreeTube… Halo tìm bài qua\n  YouTube Music rồi ưu tiên lời chạy theo nhạc từ LRCLIB; không có thì hiện lời tĩnh. Bật sẵn, tắt trong\n  Cài đặt → Media & Lời. Zen / Firefox không báo vị trí phát nên Halo tự đếm (lệch nếu tua).\n- Lời khớp giờ hơn: ưu tiên bản lời làm cho đúng video, bỏ các bản \"giả mốc giờ\" trên LRCLIB, đọc đúng tên video\n  kiểu \"Tên bài - Ca sĩ\".\n- Câu lời dài không còn bị cắt \"…\" trên thẻ nổi và tab Lời; thẻ nổi có lại nút Lời cho YouTube.\n- Tab Agent: khi chờ duyệt chỉ mở hai tai (biểu tượng agent và \"!\" hoặc \"?\"), giữ giờ / bài hát ở giữa, tự tắt sau\n  30 phút; sửa lỗi tai cam đứng yên sau khi đã trả lời.\n- Dùng ít bộ nhớ hơn khi hiện lời.",
-    "en": "- Lyrics for YouTube in browsers (Linux): Zen, Firefox, Chrome, Brave, Edge, FreeTube… Halo finds the song through\n  YouTube Music, then prefers synced lyrics from LRCLIB, falling back to plain ones. On by default; turn off in\n  Settings > Media & Lyrics. Zen / Firefox report no playback position, so Halo counts it (off after seeking).\n- Better timed lyrics: entries made for the exact video come first, fake-timed LRCLIB uploads are skipped, and\n  \"Song - Artist\" video titles are read correctly.\n- Long lyric lines are no longer cut with \"…\" on the floating card and the Lyrics tab; the card's Lyrics button is\n  back for YouTube.\n- Agent tab: an approval request now opens just the ears (agent badge and \"!\" or \"?\"), keeps the clock / track in the\n  centre and ends after 30 minutes; fixed the orange ears staying after the answer.\n- Less memory used while showing lyrics."
+    "vi": "- Windows có lời bài hát: tab Lời chạy với Spotify và mọi app phát nhạc, kể cả YouTube trên trình duyệt (Chrome, Edge,\n  Firefox, Zen, Cốc Cốc, Comet…). Cùng cách tìm như Linux: ưu tiên lời chạy theo nhạc, bỏ bản lời giả mốc giờ.\n- Windows có player nổi: bấm \"Tách ra\" để mở thẻ player, kéo đi đâu cũng được, Halo nhớ vị trí; có chế độ Lời, tự ẩn\n  khi chơi game / xem toàn màn hình, kéo về island để thu lại.\n- Firefox / Zen trên Windows: lời không còn nhảy về đầu bài khi tua; ảnh bìa của video trước không còn bị giữ lại.\n- Chip \"Tên app ↗\" chọn đúng tab đang phát cả khi YouTube đang chạy quảng cáo.",
+    "en": "- Lyrics on Windows: the Lyrics tab works with Spotify and every player, YouTube in browsers included (Chrome, Edge,\n  Firefox, Zen, Cốc Cốc, Comet…). Same search as on Linux: synced lyrics first, fake-timed uploads skipped.\n- Floating player on Windows: press \"Pop out\" for a player card you can drag anywhere; Halo remembers where. It has the\n  Lyrics mode, hides under games and fullscreen video, and docks back when dragged to the island.\n- Firefox / Zen on Windows: lyrics no longer jump back to the start while seeking, and the previous video's cover no\n  longer sticks.\n- The \"App ↗\" chip finds the playing tab even while YouTube shows an ad."
   },
-  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.4",
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.5",
   "assets": {
     "linux-x86_64-appimage": {
       "name": "Halo-x86_64.AppImage",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.4/Halo-x86_64.AppImage",
-      "size": 10041848,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv/JgQSHaoWfvON8OerlWZEXx03lMaisAoFAFyf6Qm5Uil8l0KSY+QLU3rNCYxoyGRv0Vs2y1l9MrIUokOXwvzQE=\ntrusted comment: halo 0.3.4 linux-x86_64-appimage\nX4WM/pMbihHQACRV9T8V8pNPGbD2Zjkpl3XLBM9P1+piENi6AlHEUHX9FRP3S5kI4fCNZ214x9O/HcOpo9ssBA==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.5/Halo-x86_64.AppImage",
+      "size": 10037752,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvwIj4HePbQWZfOBVQca3NQHR96aviHvHcZBmXRiEqlmP2CBGQc5+LmduRIG08MCbUDTs2PwIbWHgGIDf5Q6qKQo=\ntrusted comment: halo 0.3.5 linux-x86_64-appimage\n4sP60Yp1Xj0GNTaZMlb1lOJFWn4ZVZGybMYEcQ1bSKoZ6jKQjxDbDdobfEospyG1pFl8gsDnlmLaCgG0g57VAQ==\n"
     },
     "windows-x86_64-exe": {
       "name": "halo-x86_64-windows.exe",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.4/halo-x86_64-windows.exe",
-      "size": 12053504,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv62rlmCoCyzumi+ph3oWn1TucOq7OAPj+NEbcoEK9d8P66yiY/Eou0tK0goyXUK4qEhRfDV6GjMw4py22NfMJQU=\ntrusted comment: halo 0.3.4 windows-x86_64-exe\n0N6krFUyxRW1ehD0S3e/8oE2w0RDab8WIJj4a0dMrKkM6hMeRX4OXLnyW2EzIZ4gtp748hC2guLdlEPvFEtZCw==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.5/halo-x86_64-windows.exe",
+      "size": 12149248,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv4oksb/HfDmT+M4WcCxUL7BDBz5g8XQXyCjyhbgKglONhlFDQQCl6n2EqSVYOkcmkTfZJr2UZouuR8M1g2eqvgc=\ntrusted comment: halo 0.3.5 windows-x86_64-exe\n89SQKS2vx1oAZW+ZclNgmbnvULO+qSoPCyIuVO9rF/r32eKkTHzLVxftafj6rq9D+Q6k21qvvsCioop5BnVdCA==\n"
     }
   }
 }
