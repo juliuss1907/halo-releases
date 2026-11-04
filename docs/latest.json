@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "version": "0.3.3",
+  "version": "0.3.4",
   "date": "2026-11-04",
   "notes": {
-    "vi": "- Mở đúng app đang phát: chip \"Tên app ↗\" ở góc player (cả trên thẻ nổi) đưa cửa sổ app lên trước. Với trình duyệt là\n  đúng tab đang phát: Zen / Firefox tự chuyển tab, Chrome cần extension Plasma Integration (Linux), Windows tự tìm tab.\n- Bấm thông báo để mở app đã gửi; nút × (hiện khi rê chuột) chỉ tắt thông báo.\n- Tên app thật thay cho tên kỹ thuật, ví dụ \"Liner\" thay cho \"@liner/client\", \"Zen Browser\" thay cho \"Mozilla zen\".\n- Bấm Next trên trình duyệt giờ chỉ trượt một lần sang bài mới, và island không còn nhảy sang tab Lịch.\n- Linux: tab Agent mới cho Claude Code, Codex, OpenCode, Gemini CLI, Pi, Hermes, Cursor: hạn mức 5 giờ / tuần,\n  token 7 ngày, tiến trình. Tai báo 3 giây khi agent bắt đầu, chuyển cam khi agent chờ duyệt. Cài đặt → Agent có nút\n  Nối tự động (hỏi lại trước khi sửa, có bản sao lưu và nút Gỡ nối).\n- Windows: chế độ Nhường chỗ tính cả cửa sổ chạm cạnh trên màn hình, giống KDE.",
-    "en": "- Open the playing app: the \"App ↗\" chip in the player (and on the floating card) brings its window forward. For\n  browsers it is the playing tab: Zen / Firefox switch tabs themselves, Chrome needs the Plasma Integration extension\n  (Linux), and Windows finds the tab on its own.\n- Click a notification to open the app that sent it; the × (shown on hover) only dismisses it.\n- Real app names instead of technical ones, e.g. \"Liner\" instead of \"@liner/client\", \"Zen Browser\" instead of\n  \"Mozilla zen\".\n- Next in a browser now slides once to the new track, and the island no longer jumps to the Calendar tab.\n- Linux: a new Agent tab for Claude Code, Codex, OpenCode, Gemini CLI, Pi, Hermes and Cursor: 5-hour / weekly limits,\n  7-day tokens and progress. The ears announce a starting agent for 3 seconds and turn orange when it awaits approval.\n  Settings > Agent has one-click Connect (asks first, keeps a backup, and can Disconnect).\n- Windows: Yield mode also counts windows touching the top edge of the screen, like on KDE."
+    "vi": "- Lời bài hát cho YouTube trên trình duyệt (Linux): Zen, Firefox, Chrome, Brave, Edge, FreeTube… Halo tìm bài qua\n  YouTube Music rồi ưu tiên lời chạy theo nhạc từ LRCLIB; không có thì hiện lời tĩnh. Bật sẵn, tắt trong\n  Cài đặt → Media & Lời. Zen / Firefox không báo vị trí phát nên Halo tự đếm (lệch nếu tua).\n- Lời khớp giờ hơn: ưu tiên bản lời làm cho đúng video, bỏ các bản \"giả mốc giờ\" trên LRCLIB, đọc đúng tên video\n  kiểu \"Tên bài - Ca sĩ\".\n- Câu lời dài không còn bị cắt \"…\" trên thẻ nổi và tab Lời; thẻ nổi có lại nút Lời cho YouTube.\n- Tab Agent: khi chờ duyệt chỉ mở hai tai (biểu tượng agent và \"!\" hoặc \"?\"), giữ giờ / bài hát ở giữa, tự tắt sau\n  30 phút; sửa lỗi tai cam đứng yên sau khi đã trả lời.\n- Dùng ít bộ nhớ hơn khi hiện lời.",
+    "en": "- Lyrics for YouTube in browsers (Linux): Zen, Firefox, Chrome, Brave, Edge, FreeTube… Halo finds the song through\n  YouTube Music, then prefers synced lyrics from LRCLIB, falling back to plain ones. On by default; turn off in\n  Settings > Media & Lyrics. Zen / Firefox report no playback position, so Halo counts it (off after seeking).\n- Better timed lyrics: entries made for the exact video come first, fake-timed LRCLIB uploads are skipped, and\n  \"Song - Artist\" video titles are read correctly.\n- Long lyric lines are no longer cut with \"…\" on the floating card and the Lyrics tab; the card's Lyrics button is\n  back for YouTube.\n- Agent tab: an approval request now opens just the ears (agent badge and \"!\" or \"?\"), keeps the clock / track in the\n  centre and ends after 30 minutes; fixed the orange ears staying after the answer.\n- Less memory used while showing lyrics."
   },
-  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.3",
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.4",
   "assets": {
     "linux-x86_64-appimage": {
       "name": "Halo-x86_64.AppImage",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.3/Halo-x86_64.AppImage",
-      "size": 10021368,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv1YVYoyvjM48Yxu5s1345Np9gZvKDa0Wjj51tzhoSEBMfY3KwtV+8y29FXFWueXrxxjW7mMpCprLtFoYzaoQmQY=\ntrusted comment: halo 0.3.3 linux-x86_64-appimage\nh2kZK402bpFskvbOxVjFm+2WXgszS9h96kAytnquFRzQpwc+PpZFNzL9NvuXeL4q0KZGzWL73ZtnQBTDpUaEDg==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.4/Halo-x86_64.AppImage",
+      "size": 10041848,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv/JgQSHaoWfvON8OerlWZEXx03lMaisAoFAFyf6Qm5Uil8l0KSY+QLU3rNCYxoyGRv0Vs2y1l9MrIUokOXwvzQE=\ntrusted comment: halo 0.3.4 linux-x86_64-appimage\nX4WM/pMbihHQACRV9T8V8pNPGbD2Zjkpl3XLBM9P1+piENi6AlHEUHX9FRP3S5kI4fCNZ214x9O/HcOpo9ssBA==\n"
     },
     "windows-x86_64-exe": {
       "name": "halo-x86_64-windows.exe",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.3/halo-x86_64-windows.exe",
-      "size": 12023808,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvwk6d7HIAw8/RoCXZy5aVzfC1ZHPmhYI/cFhCfVeR8PNuy8SilcQtVygi38OMD9Mmo7HdY3wCSHgDeJZRIWEwQg=\ntrusted comment: halo 0.3.3 windows-x86_64-exe\nLWrM+j9UoCBtE7qfjMFQH1/1fB7/wo0EcgH4/XV/yQ+KZC3aQ3GicX+grErs8UTjK6uTpvYpw5UNNnlDTRNfAQ==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.4/halo-x86_64-windows.exe",
+      "size": 12053504,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv62rlmCoCyzumi+ph3oWn1TucOq7OAPj+NEbcoEK9d8P66yiY/Eou0tK0goyXUK4qEhRfDV6GjMw4py22NfMJQU=\ntrusted comment: halo 0.3.4 windows-x86_64-exe\n0N6krFUyxRW1ehD0S3e/8oE2w0RDab8WIJj4a0dMrKkM6hMeRX4OXLnyW2EzIZ4gtp748hC2guLdlEPvFEtZCw==\n"
     }
   }
 }
