@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "version": "0.3.5",
-  "date": "2026-11-04",
+  "version": "0.3.6",
+  "date": "2026-11-14",
   "notes": {
-    "vi": "- Windows có lời bài hát: tab Lời chạy với Spotify và mọi app phát nhạc, kể cả YouTube trên trình duyệt (Chrome, Edge,\n  Firefox, Zen, Cốc Cốc, Comet…). Cùng cách tìm như Linux: ưu tiên lời chạy theo nhạc, bỏ bản lời giả mốc giờ.\n- Windows có player nổi: bấm \"Tách ra\" để mở thẻ player, kéo đi đâu cũng được, Halo nhớ vị trí; có chế độ Lời, tự ẩn\n  khi chơi game / xem toàn màn hình, kéo về island để thu lại.\n- Firefox / Zen trên Windows: lời không còn nhảy về đầu bài khi tua; ảnh bìa của video trước không còn bị giữ lại.\n- Chip \"Tên app ↗\" chọn đúng tab đang phát cả khi YouTube đang chạy quảng cáo.",
-    "en": "- Lyrics on Windows: the Lyrics tab works with Spotify and every player, YouTube in browsers included (Chrome, Edge,\n  Firefox, Zen, Cốc Cốc, Comet…). Same search as on Linux: synced lyrics first, fake-timed uploads skipped.\n- Floating player on Windows: press \"Pop out\" for a player card you can drag anywhere; Halo remembers where. It has the\n  Lyrics mode, hides under games and fullscreen video, and docks back when dragged to the island.\n- Firefox / Zen on Windows: lyrics no longer jump back to the start while seeking, and the previous video's cover no\n  longer sticks.\n- The \"App ↗\" chip finds the playing tab even while YouTube shows an ad."
+    "vi": "- Tab Agent mới: tách Gói đăng ký (Claude, ChatGPT, OpenCode Go, Antigravity) khỏi Agent; hạn mức đọc từ phiên đăng\n  nhập sẵn có của agent. Thêm Grok CLI, Antigravity CLI / IDE, DeepSeek Harness; Gemini CLI và Pi nhận Online.\n- Tai agent đầy đủ hơn: OpenCode qua plugin của Halo, Codex có \"!\" khi xin duyệt và \"?\" khi hỏi lại, Claude hiện \"!\"\n  ngay khi hộp duyệt mở. Toast của app agent trong lúc đang chạy thành tai của agent đó, không hiện thông báo trùng.\n- Bấm tai hoặc \"Mở ↗\" để mở đúng terminal của agent (Orca, tmux, WezTerm, Kitty, Windows Terminal).\n- Player theo cửa sổ đang xem và bỏ qua app bị tắt tiếng; bấm thông báo mở đúng cuộc trò chuyện (KDE Plasma).\n- Tab Thiết bị mới: danh sách thiết bị cuộn được, nút chọn loa, thanh âm lượng; không bật OSD khi đang kéo thanh. Có\n  trên Windows: chọn loa, Bluetooth, kết nối / ngắt, pin.\n- Lịch âm trong tab Lịch: ngày âm, tuần trăng, mùng 1, rằm và ngày lễ; tuỳ chọn hiện ngày âm trên pill.\n- Windows: tab Agent, ngôn ngữ \"tự động\" theo Windows, theo dõi tải xuống, island ít thức dậy hơn khi rê chuột ở app\n  khác.",
+    "en": "- New Agent tab: subscriptions (Claude, ChatGPT, OpenCode Go, Antigravity) apart from agents, quotas read from the\n  agents' own sign-ins. Adds Grok CLI, Antigravity CLI / IDE and DeepSeek Harness; Gemini CLI and Pi show Online.\n- Fuller agent ears: OpenCode through Halo's plugin, Codex shows \"!\" for approvals and \"?\" for questions, Claude's \"!\"\n  shows as its dialog opens. An agent app's toast during a turn becomes that agent's ears instead of a duplicate.\n- Press an ear or \"Open ↗\" to bring up the agent's own terminal (Orca, tmux, WezTerm, Kitty, Windows Terminal).\n- The player follows the window you look at and skips muted apps; clicking a notification opens its chat (KDE Plasma).\n- New Devices tab: a scrolling device list, an output button and a volume slider, with no OSD while you drag it. On\n  Windows too: outputs, Bluetooth, connect / disconnect, battery.\n- Vietnamese lunar calendar in the Calendar tab: lunar dates, moon phases, the 1st, the 15th and holidays; optionally\n  the lunar date in the pill.\n- Windows: the Agent tab, \"auto\" language from Windows, finished downloads, and fewer wake-ups from mouse moves in\n  other apps."
   },
-  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.5",
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.6",
   "assets": {
     "linux-x86_64-appimage": {
       "name": "Halo-x86_64.AppImage",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.5/Halo-x86_64.AppImage",
-      "size": 10037752,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvwIj4HePbQWZfOBVQca3NQHR96aviHvHcZBmXRiEqlmP2CBGQc5+LmduRIG08MCbUDTs2PwIbWHgGIDf5Q6qKQo=\ntrusted comment: halo 0.3.5 linux-x86_64-appimage\n4sP60Yp1Xj0GNTaZMlb1lOJFWn4ZVZGybMYEcQ1bSKoZ6jKQjxDbDdobfEospyG1pFl8gsDnlmLaCgG0g57VAQ==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.6/Halo-x86_64.AppImage",
+      "size": 10553848,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvwYQyXqhCLcCegdV2DUGNKvnQCZxN8fshmTITCkXnjGXVWtcXUGh7z2hV9xb+G+7NM+OxUU5DupANTMWbA3ibwo=\ntrusted comment: halo 0.3.6 linux-x86_64-appimage\nntvQZHN4fu3HhpE0rxpbG9Kqe82NsGN4/xTP6pIqkJ5Hj7jNwbOmdbpdNYAnqOAINKUs3kcK1UF0z5uU6gLsDw==\n"
     },
     "windows-x86_64-exe": {
       "name": "halo-x86_64-windows.exe",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.5/halo-x86_64-windows.exe",
-      "size": 12149248,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv4oksb/HfDmT+M4WcCxUL7BDBz5g8XQXyCjyhbgKglONhlFDQQCl6n2EqSVYOkcmkTfZJr2UZouuR8M1g2eqvgc=\ntrusted comment: halo 0.3.5 windows-x86_64-exe\n89SQKS2vx1oAZW+ZclNgmbnvULO+qSoPCyIuVO9rF/r32eKkTHzLVxftafj6rq9D+Q6k21qvvsCioop5BnVdCA==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.6/halo-x86_64-windows.exe",
+      "size": 15490048,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv2CSMpOugh0aNUwS6uTejsN7lBP6RF9F0Ius4ROU3bWHwe2R7zepfQQHERiMmVHW7GAxKuBT28dnPUhhLREVYAY=\ntrusted comment: halo 0.3.6 windows-x86_64-exe\nTK9nR0R5Il594SdovJgfvi8qVuHhmIlREWocW+/kjZGlkAcnZvOfJJCXvYYKE0bWRl59lisW/CYdjQUJ7pOhCw==\n"
     }
   }
 }
