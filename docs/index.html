@@ -47,6 +47,7 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .btn.primary { background: var(--accent); color: var(--ink); box-shadow: none; }
 .btn.primary:hover { box-shadow: 0 0 0 3px rgba(140,196,255,.25); }
 .btn small { font-weight: 500; opacity: .75; }
+.alt { color: var(--text3); font-size: 14px; margin: 0 0 4px; }
 .version { color: var(--text3); font-size: 13px; min-height: 20px; }
 .shot { margin: 40px auto 0; max-width: 980px; }
 .shot img { width: 100%; height: auto; border-radius: 16px; display: block; }
@@ -63,6 +64,10 @@ ol { margin: 0; padding-left: 20px; color: var(--dim); }
 ol li { margin: 6px 0; }
 code { font: 13.5px/1.5 ui-monospace, "JetBrains Mono", monospace; background: var(--panel); padding: 2px 6px; border-radius: 6px; color: var(--fg); }
 .note { color: var(--text3); font-size: 14px; margin-top: 12px; }
+.faq { display: grid; gap: 10px; }
+.faq details { background: var(--surface); border-radius: 14px; padding: 14px 18px; }
+.faq summary { cursor: pointer; font-weight: 650; font-size: 15px; }
+.faq p { margin: 10px 0 0; color: var(--dim); font-size: 14px; }
 footer { padding: 32px 0 48px; color: var(--text3); font-size: 14px; border-top: 1px solid var(--line); }
 footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
 </style>
@@ -92,10 +97,11 @@ footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
         <a class="btn primary" href="https://github.com/juliuss1907/halo-releases/releases/latest/download/Halo-x86_64.AppImage">
           <span lang="vi">Tải cho Linux</span><span lang="en">Download for Linux</span> <small>AppImage</small>
         </a>
-        <a class="btn" href="https://github.com/juliuss1907/halo-releases/releases/latest/download/halo-x86_64-windows.exe">
-          <span lang="vi">Tải cho Windows</span><span lang="en">Download for Windows</span> <small>.exe</small>
+        <a class="btn" href="https://github.com/juliuss1907/halo-releases/releases/latest/download/Halo-Setup-x86_64-windows.exe">
+          <span lang="vi">Tải cho Windows</span><span lang="en">Download for Windows</span> <small><span lang="vi">bộ cài</span><span lang="en">installer</span></small>
         </a>
       </div>
+      <p class="alt"><span lang="vi">Không muốn cài trên Windows?</span><span lang="en">Rather not install on Windows?</span> <a href="https://github.com/juliuss1907/halo-releases/releases/latest/download/halo-x86_64-windows.exe"><span lang="vi">Tải bản chạy trực tiếp (.exe)</span><span lang="en">Get the standalone .exe</span></a></p>
       <div class="version" id="version"></div>
       <div class="shot"><img src="assets/tabs.png" alt="" width="1316" height="452" loading="eager"></div>
     </div>
@@ -139,12 +145,27 @@ footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
         <div class="card">
           <h3>Windows 10 / 11</h3>
           <ol>
-            <li><span lang="vi">Tải <code>halo-x86_64-windows.exe</code> và chạy.</span><span lang="en">Download <code>halo-x86_64-windows.exe</code> and run it.</span></li>
-            <li><span lang="vi">SmartScreen cảnh báo vì file chưa ký số: chọn "More info" → "Run anyway".</span><span lang="en">SmartScreen warns because the file is not code-signed: "More info" → "Run anyway".</span></li>
+            <li><span lang="vi">Tải <code>Halo-Setup-x86_64-windows.exe</code> và chạy. Không cần quyền quản trị: Halo cài cho tài khoản của bạn và có trong Start menu.</span><span lang="en">Download <code>Halo-Setup-x86_64-windows.exe</code> and run it. No administrator rights needed: Halo installs for your account and shows up in the Start menu.</span></li>
+            <li><span lang="vi">SmartScreen cảnh báo vì file chưa ký số: chọn "Thông tin thêm" → "Vẫn chạy".</span><span lang="en">SmartScreen warns because the file is not code-signed: "More info" → "Run anyway".</span></li>
             <li><span lang="vi">Icon Halo nằm ở khay hệ thống: bấm để mở Cài đặt.</span><span lang="en">Halo lives in the notification area: click it for Settings.</span></li>
           </ol>
-          <p class="note"><span lang="vi">Mỗi file phát hành đều có chữ ký minisign (<code>.minisig</code>).</span><span lang="en">Every release file is signed with minisign (<code>.minisig</code>).</span></p>
+          <p class="note"><span lang="vi">Gỡ trong Cài đặt Windows › Ứng dụng. Mỗi file phát hành đều có chữ ký minisign (<code>.minisig</code>).</span><span lang="en">Uninstall from Windows Settings › Apps. Every release file is signed with minisign (<code>.minisig</code>).</span></p>
         </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2><span lang="vi">Câu hỏi thường gặp</span><span lang="en">Questions</span></h2>
+      <div class="faq">
+        <details>
+          <summary><span lang="vi">Windows chặn hẳn Halo, không có nút "Vẫn chạy"</span><span lang="en">Windows blocks Halo outright, with no "Run anyway" button</span></summary>
+          <p><span lang="vi">Đó là Smart App Control, thường bật trên máy cài mới Windows 11. Halo chưa có chữ ký số nên bị chặn. Tắt tại Bảo mật Windows › Kiểm soát ứng dụng &amp; trình duyệt › Smart App Control. Trên Windows 11 bản mới có thể bật lại sau khi cài; bản Windows cũ hơn thì tắt rồi có thể không bật lại được. Máy công ty: hỏi bộ phận IT.</span><span lang="en">That is Smart App Control, usually on for fresh Windows 11 installs. Halo is not code-signed yet, so it gets blocked. Turn it off in Windows Security › App &amp; browser control › Smart App Control. Recent Windows 11 builds let you turn it back on after installing; older builds may not. On a work PC, ask your IT team.</span></p>
+          <p><span lang="vi">Nếu Windows chặn một bản cập nhật, Halo giữ bản đang dùng.</span><span lang="en">If Windows blocks an update, Halo keeps the version you have.</span></p>
+        </details>
+        <details>
+          <summary><span lang="vi">Tôi đang dùng bản .exe chạy trực tiếp</span><span lang="en">I use the standalone .exe</span></summary>
+          <p><span lang="vi">Thoát Halo (chuột phải icon khay › Thoát Halo), chạy bộ cài, rồi xoá file .exe cũ. Cài đặt và dữ liệu giữ nguyên. Nếu dùng tab Agent, bấm ↻ trong Cài đặt › Agent để hook trỏ sang bản đã cài.</span><span lang="en">Quit Halo (right-click the tray icon › Quit Halo), run the installer, then delete the old .exe. Settings and data stay. If you use the Agent tab, press ↻ in Settings › Agent so the hooks point at the installed copy.</span></p>
+        </details>
       </div>
     </section>
 

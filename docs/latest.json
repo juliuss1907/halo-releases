@@ -1,24 +1,24 @@
 {
   "schema": 1,
-  "version": "0.3.7",
-  "date": "2026-11-16",
+  "version": "0.3.8",
+  "date": "2026-11-19",
   "notes": {
-    "vi": "- Windows: bấm thông báo mở đúng cuộc trò chuyện (Discord, Telegram và các app gửi toast; popup riêng của Telegram\n  cũng được).\n- Tuỳ chọn mới \"Hiện nội dung tin nhắn\" (Cài đặt › Module): tắt thì banner chỉ ghi người gửi và \"Tin nhắn mới\".\n- Windows: công tắc \"Thông báo tức thì\" (cần Developer Mode) cho thông báo tới ngay mà gần như không tốn CPU; khi tắt,\n  Halo hỏi thông báo thưa hơn (5 giây), nhẹ hơn bản trước.\n- Windows: OSD độ sáng cho màn hình laptop.\n- Windows: hook agent chạy được khi Halo nằm trong thư mục có dấu cách (ví dụ Program Files).\n- Codex / ChatGPT: tiếp tục một cuộc trò chuyện cũ vẫn hiện tai đang chạy và ✓.\n- Thông báo \"xong\" của app Claude không hiện trùng khi tai Claude đang báo.",
-    "en": "- Windows: clicking a notification opens its conversation (Discord, Telegram and apps that send toasts; Telegram's own\n  popups too).\n- New \"Show message text\" option (Settings › Modules): off shows only the sender and \"New message\" on the banner.\n- Windows: an \"Instant notifications\" switch (needs Developer Mode) delivers notifications at once at almost no CPU;\n  off, Halo checks less often (every 5 s), lighter than before.\n- Windows: brightness OSD for laptop panels.\n- Windows: agent hooks work when Halo sits in a folder with spaces (such as Program Files).\n- Codex / ChatGPT: resuming an old conversation shows its running ear and ✓ again.\n- The Claude app's \"done\" toast no longer repeats what Claude's ear already shows."
+    "vi": "- Windows: bộ cài mới Halo-Setup. Cài cho tài khoản của bạn, không cần quyền quản trị, có trong Start menu và gỡ được\n  từ Cài đặt › Ứng dụng (gỡ luôn hook agent và khởi động cùng Windows). Đang dùng file halo.exe rời: chạy bộ cài rồi\n  xoá file cũ.\n- Cửa sổ cài đặt v2: giao diện mới gọn hơn, thanh bên có icon, nút Lưu chỉ hiện khi có thay đổi, tuỳ chọn Cỡ chữ, chọn\n  font ngay trong trang Theme. Windows: thanh tiêu đề kiểu Windows 11.\n- Chỉnh trong Cài đặt thì island đổi ngay; đóng mà chưa lưu thì Halo hỏi.\n- Đặt island ở bất kỳ đâu dọc cạnh trên màn hình: kéo pill, hoặc chọn Trái / Giữa / Phải.\n- Windows: bấm icon khay mở bảng nhanh (Không làm phiền, ẩn island 5 / 15 / 60 phút, chế độ khi bị che, khởi động\n  lại); menu chuột phải nền tối.\n- \"+ Thêm app\" hiện app nghe nhạc đã cài và đang phát, kèm logo.\n- Gói đăng ký: mỗi gói một công tắc; Windows đọc gói Claude từ app Claude desktop; đăng nhập hết hạn hiện ngay trên\n  dòng.\n- Windows: DeepSeek Harness desktop (Online, tai chờ duyệt).\n- Cập nhật: Windows chặn bản mới (Smart App Control) thì Halo giữ bản đang dùng; báo rõ khi Halo nằm trong thư mục cần\n  quyền quản trị; dấu ✓ trong ghi chú hiện đúng.\n- Sửa: ảnh bìa mất khi đổi app nghe nhạc (Windows); cảnh báo của Orca / Windows Terminal trùng với tai agent được ẩn.",
+    "en": "- Windows: a new Halo-Setup installer. It installs for your account without administrator rights, adds Halo to the\n  Start menu and uninstalls from Settings › Apps (removing agent hooks and autostart too). Using a standalone\n  halo.exe: run the installer, then delete the old file.\n- Settings v2: a cleaner look, a sidebar with icons, Save only when something changed, a Text size option and fonts\n  inside the Theme page. Windows: a Windows 11 title bar.\n- The island follows the Settings window as you change things; closing with unsaved changes asks first.\n- Place the island anywhere along the top edge: drag the pill, or pick Left / Centre / Right.\n- Windows: clicking the tray icon opens a quick panel (Do not disturb, hide the island for 5 / 15 / 60 min, covered\n  mode, restart); the right-click menu is dark.\n- \"+ Add app\" shows the music apps you have installed and playing, with their logos.\n- Subscriptions: one switch each; on Windows the Claude plan is read from the Claude desktop app; an expired sign-in\n  shows on its row.\n- Windows: DeepSeek Harness desktop (Online, approval ears).\n- Updates: when Windows blocks the new version (Smart App Control) Halo keeps the current one; a clear message when Halo\n  sits in a folder that needs administrator rights; ✓ in release notes shows correctly.\n- Fixes: album art lost when switching music apps (Windows); Orca / Windows Terminal alerts repeating an agent's ear\n  are hidden."
   },
-  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.7",
+  "page": "https://github.com/juliuss1907/halo-releases/releases/tag/v0.3.8",
   "assets": {
     "linux-x86_64-appimage": {
       "name": "Halo-x86_64.AppImage",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.7/Halo-x86_64.AppImage",
-      "size": 10553848,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv7UeEmj78avuWg+oruIh6hzTTO9m/Z61o/eBoEhkeL6ChpQ/KM9b9o7hk2B/elLG/e4DVilqqjjaKZCbpRKFlQs=\ntrusted comment: halo 0.3.7 linux-x86_64-appimage\n/30JXsUbme5OlDu3oEEuxXotbLfsalhlD8UKdhPnixQjKce2P7OoXly9exFz9jOTZ2YyTJlbM+YBAcipjpI7Dw==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.8/Halo-x86_64.AppImage",
+      "size": 10799608,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvxWhFMS3g+gYz1SaxMcOIKWt9z7WUC5xiGZvgmTKbJhc+X/w40G84t8IuvaTbBhhC6MhHsX9R7Mvbk6xLiHPLQE=\ntrusted comment: halo 0.3.8 linux-x86_64-appimage\nNxR0Hz4FhrQozPgSL70lb0i7WrXU/aDUtU1nsd1qqzOFmbmUqEzVKcwZ5hToByRvCBvzF66JNIf1MxbHzKlyBw==\n"
     },
     "windows-x86_64-exe": {
       "name": "halo-x86_64-windows.exe",
-      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.7/halo-x86_64-windows.exe",
-      "size": 15628800,
-      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMv4+4nmKRmPuKmYu2t+faPfZMHlyTSWuIdAYPIPzuP0Mn5QdWHor7muURKxbd9Pqm/bldq2yt2Z4we0TBbYAV0wg=\ntrusted comment: halo 0.3.7 windows-x86_64-exe\nhJK8hWH/mPLFJ7KyCraOTb/rr9gxoS9oCNktQXvPt75CxIkGKa+QBrvl9VO/QtmvOTa6Z2zj2NdVp19+WP7HDw==\n"
+      "url": "https://github.com/juliuss1907/halo-releases/releases/download/v0.3.8/halo-x86_64-windows.exe",
+      "size": 16079360,
+      "minisig": "untrusted comment: signature from minisign secret key\nRUSqI1PgUVzMvxKsZ+msRgWUOFn5tN6Up8rB6AYnWQ24Nc2MEKpCWLV0XFgL3NT6AlITNlhKX/DsCTiOkyJXrDL3XDYvu1Oi8ww=\ntrusted comment: halo 0.3.8 windows-x86_64-exe\njY4H2ETXp7SokGVfhWJxMoMGr0bhZsrmtvJ62ZILYiyxGTV+Z89wVaskqz/oE3tBhWglTCaVkz6KHINE8mK2Dg==\n"
     }
   }
 }
